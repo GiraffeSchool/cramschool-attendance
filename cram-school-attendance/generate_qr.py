@@ -31,7 +31,7 @@ for grade_name, sheet_id in sheet_infos.items():
             eng_name = student.get('Name')
             if not sid or not name:
                 continue
-            qr_url = f"https://your-domain.com/attendance?sid={sid}"
+            qr_url = f"https://cramschool-attendance.vercel.app/api/attendance?sid={sid}"
             img = qrcode.make(qr_url)
             # 學生的檔名：中文名_英文名_唯一ID.png
             filename = f"{name}_{eng_name}_{sid}.png"
